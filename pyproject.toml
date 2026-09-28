@@ -1,0 +1,8 @@
+[project]
+name = "vlab"
+version = "1.0.0"
+description = "Virtual Lab Django Project"
+requires-python = ">=3.12"
+dependencies = [
+    "Django==6.1.1",
+]
