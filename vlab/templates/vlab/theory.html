@@ -30,16 +30,23 @@
     
     <div class="code-example-box">
         <div class="code-title">Example: Simple Function-Based View</div>
-        <pre class="vlab-code"><code>from django.shortcuts import render
+        <pre class="vlab-code"><code># Import render to combine an HTML template with a context dictionary and return an HttpResponse
+from django.shortcuts import render
+# Import HttpResponse to return raw HTTP response content and status codes
 from django.http import HttpResponse
 
+# A Function-Based View is a Python function taking an HttpRequest object ('request') as its first parameter
 def article_list(request):
+    # Check if the incoming request method is 'GET' (typically used to retrieve and display data)
     if request.method == 'GET':
-        # Retrieve and render articles
+        # Define a sample list of articles (in real applications, fetched from the database model)
         articles = ["Django Overview", "Views Architecture", "Routing Guide"]
+        # Render the template 'articles.html' with the articles passed inside the context dictionary
         return render(request, 'articles.html', {'articles': articles})
+    
+    # Check if the incoming request method is 'POST' (typically used to submit and create data)
     elif request.method == 'POST':
-        # Process submitted article
+        # Return an HttpResponse with a confirmation message and HTTP status code 201 (Created)
         return HttpResponse("Article created successfully", status=201)</code></pre>
     </div>
 
@@ -55,16 +62,25 @@ def article_list(request):
 
     <div class="code-example-box">
         <div class="code-title">Example: Simple Class-Based View</div>
-        <pre class="vlab-code"><code>from django.views import View
+        <pre class="vlab-code"><code># Import Django's base View class that provides HTTP method routing and lifecycle handling
+from django.views import View
+# Import render to combine an HTML template with a context dictionary and return an HttpResponse
 from django.shortcuts import render
+# Import HttpResponse to return raw HTTP response content and status codes
 from django.http import HttpResponse
 
+# A Class-Based View inherits from View; each HTTP method is handled by a matching instance method
 class ArticleListView(View):
+    # get() is automatically dispatched by Django when an HTTP GET request is received
     def get(self, request):
+        # Define a sample list of articles (in real applications, fetched from the database model)
         articles = ["Django Overview", "Views Architecture", "Routing Guide"]
+        # Render the template 'articles.html' with the articles passed inside the context dictionary
         return render(request, 'articles.html', {'articles': articles})
 
+    # post() is automatically dispatched by Django when an HTTP POST request is received
     def post(self, request):
+        # Return an HttpResponse with a confirmation message and HTTP status code 201 (Created)
         return HttpResponse("Article created successfully", status=201)</code></pre>
     </div>
 
@@ -127,6 +143,10 @@ class ArticleListView(View):
                 </tr>
             </tbody>
         </table>
+    </div>
+
+    <div class="section-nav-bottom">
+        <a href="{% url 'pretest' %}" class="vlab-btn btn-rate next-btn">Next &rarr;</a>
     </div>
 
 </div>

@@ -95,6 +95,16 @@ html, body {
     gap: 12px;
     text-decoration: none;
     color: inherit;
+    line-height: 1;
+}
+
+.header-logo-img {
+    height: 48px;
+    max-height: 48px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
 }
 
 .logo-icon-wrap {
@@ -189,6 +199,39 @@ html, body {
 
 .btn-outline:hover {
     background-color: #f0f7fb;
+}
+
+/* Section Bottom Navigation */
+.section-nav-bottom {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 36px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.next-btn {
+    font-size: 14.5px;
+    font-weight: 600;
+    padding: 8px 24px;
+    border-radius: 20px;
+    background-color: var(--primary-blue);
+    color: var(--white);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(22, 131, 197, 0.25);
+    transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.next-btn:hover {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    text-decoration: none;
+    transform: translateX(3px);
+    box-shadow: 0 4px 8px rgba(22, 131, 197, 0.35);
 }
 
 /* Thin Orange Separator below header */
@@ -1144,6 +1187,11 @@ code {
         font-size: 12px;
     }
 
+    .header-logo-img {
+        height: 38px;
+        max-height: 38px;
+    }
+
     .logo-main {
         font-size: 18px;
     }
@@ -1233,5 +1281,21 @@ code {
         grid-template-columns: 1fr;
         gap: 24px;
         text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-logo-img {
+        height: 32px;
+        max-height: 32px;
+    }
+
+    .section-nav-bottom {
+        justify-content: stretch;
+    }
+
+    .next-btn {
+        width: 100%;
+        justify-content: center;
     }
 }
