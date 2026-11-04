@@ -63,13 +63,14 @@ The project is deployed using Vercel.
 
 Add screenshots of your actual application in a `screenshots/` folder and use the following paths.
 
-### Experiment Interface
-
-![Experiment Interface](screenshots/experiments.png)
-
 ### Homepage
 
-![Homepage](screenshots/homepage.png)
+![Homepage](screenshots/Homepage.png)
+
+### Experiment Interface
+
+![Experiment Interface](screenshots/simulation.png)
+
 
 > Note: Add the corresponding screenshot files to the repository to display these images.
 
