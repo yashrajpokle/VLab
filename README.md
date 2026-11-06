@@ -236,7 +236,7 @@ Computer Engineering Student
 
 - GitHub: [@yashrajpokle](https://github.com/yashrajpokle)
 - Project: [VLab](https://github.com/yashrajpokle/VLab)
-- Live Website: [VLab – Virtual Programming Laboratory](https://vlab-django.vercel.app/)
+- Live Website: [VLab – Virtual Programming Laboratory](https://vlab-django-1b3zehcvc-yashrajpokle.vercel.app)
 
 ---
 
