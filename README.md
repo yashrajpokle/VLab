@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <a href="https://vlab-django.vercel.app/"><strong>🌐 Live Demo</strong></a> •
+  <a href="https://vlab-django-1b3zehcvc-yashrajpokle.vercel.app"><strong>🌐 Live Demo</strong></a> •
   <a href="https://github.com/yashrajpokle/VLab"><strong>📂 GitHub Repository</strong></a>
 </p>
 
